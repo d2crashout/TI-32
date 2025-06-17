@@ -1,7 +1,9 @@
 import express from "express";
 import openai from "openai";
 import i264 from "image-to-base64";
-import jimp from "jimp";
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+const jimp = require("jimp");
 
 export async function chatgpt() {
   const routes = express.Router();
